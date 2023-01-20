@@ -1,0 +1,113 @@
+/* HEADER */
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        border: 1px solid $light_color;
+        padding: 0.5rem;
+
+        h3 {
+            font-family: $secondary_font;
+            font-size: 0.875rem;
+            font-weight: 200;
+        }
+    }
+
+    nav {
+        position: absolute;
+        background-color: $dark_color;
+        inset: 0;
+        transition: all .4s ease;
+        transform: translateX(-9999px);
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            li {
+                padding: 0.5rem;
+                margin-block-end: 2rem;
+
+                a {
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    color: $light_color;
+                }
+
+                &:hover {
+                    border-bottom: 2px solid $light_color;
+                }
+            }
+        }
+
+    }
+
+    .header-hamburger {
+        position: absolute;
+        z-index: 1;
+        right: 12px;
+
+        .line1,
+        .line2,
+        .line3 {
+            width: 1.875rem;
+            height: 0.25rem;
+            background-color: white;
+            border-radius: 4px;
+            transition: all .1s ease-out;
+        }
+
+        .line1 {
+            &.active {
+                transform: rotate(45deg) translate(12.1px, 0px);
+
+            }
+        }
+
+        .line3 {
+            &.active {
+                transform: rotate(-45deg) translate(12.1px, 0px);
+            }
+        }
+
+        .line2 {
+            margin-block: 0.3125rem;
+
+            &.active {
+                background-color: transparent;
+            }
+        }
+    }
+
+}
+
+@include for-tablet-portrait-up {
+    .header__container {
+        nav {
+            position: unset;
+
+            ul {
+                flex-direction: row;
+                align-items: center;
+
+
+                li {
+                    margin-block-end: 0;
+                }
+            }
+        }
+
+        .header-hamburger {
+            display: none;
+        }
+    }
+}

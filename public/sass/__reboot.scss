@@ -1,0 +1,48 @@
+/* REBOOT  */
+$primary_font: 'Montserrat', sans-serif;
+$heading_font: 'Lora', serif;
+$secondary_font: 'Crimson Pro', serif;
+
+$light_color: hsl(0, 0%, 100%);
+$dark_color: hsl(270, 4%, 9%);
+
+$container_width_sm: 93%;
+$container_width_m: 85%;
+$container_width_l: 76%;
+$container_width_xl: 70%;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+    display: block;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+body {
+    background-color: $dark_color;
+    font-family: $primary_font;
+    color: $light_color;
+    min-height: 100vh;
+}

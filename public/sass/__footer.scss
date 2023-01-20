@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* block-size: calc(100% - 32px); */
+
+    p {
+        font-size: clamp(0.875rem, 2.33vw, 1.125rem);
+        font-weight: 500;
+        color: #A9A9A9;
+    }
+}

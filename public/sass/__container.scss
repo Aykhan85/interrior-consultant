@@ -1,0 +1,14 @@
+/* CONTAINER */
+.container {
+    max-inline-size: $container_width_sm;
+    margin-inline: auto;
+    padding-block: 0.75rem;
+    min-block-size: 100vh;
+    display: grid;
+}
+
+@include for-tablet-portrait-up {
+    .container {
+        max-inline-size: $container_width_m;
+    }
+}
